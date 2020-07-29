@@ -36,8 +36,10 @@ public class App {
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
         StringBuilder sb = new StringBuilder();
+        sb.append("[\n");
         for (Employee employee : employees)
             sb.append(gson.toJson(employee) + "\n");
+        sb.append("]");
         return sb.toString();
     }
 
